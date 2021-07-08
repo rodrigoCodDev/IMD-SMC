@@ -11,33 +11,28 @@ int pinoLed4 = 9;
 
 // METODOS
 
-// Configura a saída conforme o valor de entrada do sensor
 void saida(int valorEntrada) {
+  // Configura a saída conforme o valor de entrada do sensor
   if (valorEntrada < 640) {
     digitalWrite(pinoLed1, HIGH);
-  }
-
-  if (valorEntrada < 768) {
+    
+  } else if (valorEntrada < 768) {
     digitalWrite(pinoLed1, HIGH);
     digitalWrite(pinoLed2, HIGH);
-  }
-
-  if (valorEntrada < 896) {
+    
+  } else if (valorEntrada < 896) {
     digitalWrite(pinoLed1, HIGH);
     digitalWrite(pinoLed2, HIGH);
     digitalWrite(pinoLed3, HIGH);
-  }
-
-  if (valorEntrada >= 896) {
+    
+  } else if (valorEntrada >= 896) {
     digitalWrite(pinoLed1, HIGH);
     digitalWrite(pinoLed2, HIGH);
     digitalWrite(pinoLed3, HIGH);
     digitalWrite(pinoLed4, HIGH);
   }
-}
 
-// Desliga todas saídas para que o sensor dê novos valores.
-void desligarSaida() {
+  // Desliga todas saídas para que o sensor dê novos valores.
   digitalWrite(pinoLed1, LOW);
   digitalWrite(pinoLed2, LOW);
   digitalWrite(pinoLed3, LOW);
@@ -62,8 +57,4 @@ void loop() {
 
   // Saída
   saida(valorSensor);
-
-  // Só para as LEDs não ligarem e desligarem a uma frequência muito alta
-  delay(200);
-  desligarSaida();
 }
