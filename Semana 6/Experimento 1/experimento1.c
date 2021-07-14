@@ -1,24 +1,24 @@
 // PIC18F45K20
 
 #pragma config FOSC = INTIO67   // Oscilador
-#pragma config BOREN = OFF      // Resetar o microcontrolador quando houver queda de tensão.
+#pragma config BOREN = OFF      // Resetar o microcontrolador quando houver queda de tensï¿½o.
 #pragma config PBADEN = OFF     // Desligando conversor AC/DC de PORTB
 
 #include <xc.h>
 #define _XTAL_FREQ 1000000
 
 void main(void) {
-    // Configurando saída no PORTD
+    // Configurando saï¿½da no PORTD
     TRISD = 0b0000000; 
     PORTD = 0b00000011;
     
-    // Configurando entrada com interrupção
+    // Configurando entrada com interrupï¿½ï¿½o
     TRISB = 0b00000001;         // Configura o bit RB0 como entrada.
-    INTCONbits.INT0IE = 1;      // Habilitar interrupção externa INT0
-    INTCONbits.INT0IF = 0;      // Limpar flag da interrupção INT0
-    INTCON2bits.INTEDG0 = 0;    // Habilitar interrupção INT0 na borda de descida
-    RCONbits.IPEN = 0;          // Desligar todas as prioridades interrupção
-    INTCONbits.GIE = 1;         // Habilitar interrupção geral.     
+    INTCONbits.INT0IE = 1;      // Habilitar interrupï¿½ï¿½o externa INT0
+    INTCONbits.INT0IF = 0;      // Limpar flag da interrupï¿½ï¿½o INT0
+    INTCON2bits.INTEDG0 = 0;    // Habilitar interrupï¿½ï¿½o INT0 na borda de descida
+    RCONbits.IPEN = 0;          // Desligar todas as prioridades interrupï¿½ï¿½o
+    INTCONbits.GIE = 1;         // Habilitar interrupï¿½ï¿½o geral.     
     
     while(1) {
         __delay_ms(70);
@@ -43,21 +43,21 @@ void __interrupt() funcao(){
         INTCONbits.INT0IF = 0;
         
         if(PORTD == 0b00011000) {
-            // Se a sequência selecionada foi correta, faça...
+            // Se a sequï¿½ncia selecionada foi correta, faï¿½a...
             int tempo = 0;
             
             // Pisque todos os LEDs PORTD durante 2 segundos
             while(tempo < 2000) {
                 PORTD = 0b00000000;
-                __delay_ms(100);
+                __delay_ms(50);
                 
                 PORTD = 0b11111111;
-                __delay_ms(100);
+                __delay_ms(50);
                 
-                tempo += 200;
+                tempo += 100;
             }
             
-            // Reconfigure a saída, reinicializando o jogo
+            // Reconfigure a saï¿½da, reinicializando o jogo
             PORTD = 0b00000011;
         }
     }
