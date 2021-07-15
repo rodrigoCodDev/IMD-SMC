@@ -9,7 +9,7 @@
 
 void main(void) {
     // Configurando sa�da no PORTD
-    TRISD = 0b0000000; 
+    TRISD = 0b00000000; 
     PORTD = 0b00000011;
     
     // Configurando entrada com interrup��o
