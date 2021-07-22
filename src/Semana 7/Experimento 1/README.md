@@ -7,4 +7,4 @@ Objetivo: ao apertar o botão INT0, o PIC deve gerar uma interrupção que fará
 - Gerará um delay de 2 segundos e ficará piscando o LED 2 do PORTD; e
 - Irá rotacionar os LEDs 4, 5, 6 e 7 do PORTD.
 
-![](../../midias/Semana 7/experimento1.gif)
+![](midias/Semana 7/experimento1.gif)
