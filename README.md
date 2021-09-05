@@ -15,5 +15,5 @@ O repositório conta com vários experimentos que são divididos por semana. O a
 4. Semana 4
 5. [Semana 5 - Sensor de luminosidade](./src/Semana5/semana5.md)
 6. [Semana 6 - Jogo com PIC](./src/Semana6/semana6.md)
-7. Semana 7
+7. [Semana 7 - Rotacionando LEDs com PIC](./src/Semana7/semana7.md)
 8. Semana 8
