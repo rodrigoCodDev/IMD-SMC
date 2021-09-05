@@ -10,7 +10,7 @@ Durante os projetos foi possível:
 O repositório conta com vários experimentos que são divididos por semana. O acesso a descrição de cada experimento pode ser feito usando os links:
 
 1. [Semana 1 - Circuitos de entrada e saída com Arduino](./src/Semana1/semana1.md)
-2. Semana 2
+2. [Semana 2 - Desenvolvimento de Semáforo com Arduino](./src/Semana2/semana2.md)
 3. Semana 3
 4. Semana 4
 5. Semana 5

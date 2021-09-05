@@ -5,7 +5,7 @@
 
 **Objetivos:**
 - Conhecer o Arduino Mega 2560;
-- Programar o Arduino;
+- Programar o Arduino; e
 - Desenvolver algoritmo e circuitos de entrada e saída com o Arduino.
 
 
